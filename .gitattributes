@@ -1,5 +1,2 @@
-# Auto detect text files and perform LF normalization
-* text=auto
-
 # Force Jupyter Notebooks to be counted as Python
 *.ipynb linguist-language=Python    
