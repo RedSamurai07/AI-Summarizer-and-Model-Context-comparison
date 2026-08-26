@@ -6,13 +6,16 @@ from openai import OpenAI
 from dotenv import load_dotenv
 
 load_dotenv()
+# create an OpenAI client using the API key from .env
+client = OpenAI(base_url = "https://openrouter.ai/api/v1", api_key=os.getenv("OPENAI_API_KEY")) 
 
-openai_client = OpenAI()  # uses OPENAI_API_KEY
-groq_client = OpenAI(
-    api_key=os.getenv("GROQ_API_KEY"),
-    base_url="https://api.groq.com/openai/v1",
-)
+liquid_client = OpenAI(
+    api_key=os.getenv("OPEN_API_KEY"),
+    base_url="https://openrouter.ai/api/v1")
 
+nvidia_client = OpenAI(
+    api_key=os.getenv("OPENAI_API_KEY"),
+    base_url="https://openrouter.ai/api/v1")
 
 def ask(client, model, prompt):
     r = client.chat.completions.create(
@@ -22,8 +25,8 @@ def ask(client, model, prompt):
 
 
 def battle(prompt):
-    a = ask(openai_client, "gpt-4o-mini", prompt)
-    b = ask(groq_client, "llama-3.3-70b-versatile", prompt)
+    a = ask(liquid_client, "liquid/lfm-2.5-2.6b:free", prompt)
+    b = ask(nvidia_client, "nvidia/nemotron-3.5-lightning:free", prompt)
     return a, b
 
 

@@ -6,7 +6,7 @@ def fetch_website_contents(url: str) -> str:
     Fetches HTML content and extracts readable text.
     Removes noisy elements to optimize LLM token usage.
     """
-    # Use a standard User-Agent to avoid getting blocked by basic bot protections
+    # Using a standard User-Agent to avoid getting blocked by basic bot protections
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
     }
