@@ -1,5 +1,11 @@
 # AI Website Summarizer
 
+Demo Links
+
+1). [AI Website Summarizer](https://www.loom.com/share/2c006bca97ca41059ce6ccecc29551e8)
+
+2). [Arena AI Website](https://www.loom.com/share/86edf96eac31444ca5bc14d4b59efa3c)
+
 ## Table of contents
 
 - [Project Overview](#project-overview)
